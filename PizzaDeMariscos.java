@@ -1,7 +1,7 @@
 /**
  * Clase concreta que representa un tipo de pizza (de mariscos).
  */
-public class PizzaDeMariscos implements Pizza{
+public class PizzaDeMariscos extends Pizza{
 
     /**
      * constructor de PizzaDeMariscos. Utiliza la herencia de Pizza y, por ende, su constructor.

@@ -1,7 +1,7 @@
 /**
  * Clase concreta que representa un tipo de pizza (hawaiiana).
  */
-public class PizzaHawaiiana implements Pizza{
+public class PizzaHawaiiana extends Pizza{
     
     /**
      * constructor de PizzaHawaiiana. Utiliza la herencia de Pizza y, por ende, su constructor.

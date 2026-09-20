@@ -1,7 +1,7 @@
 /**
  * Clase concreta que representa un tipo de pizza (vegetariana).
  */
-public class PizzaVegetariana implements Pizza{
+public class PizzaVegetariana extends Pizza{
 
     /**
      * constructor de PizzaVegetariana. Utiliza la herencia de Pizza y, por ende, su constructor.

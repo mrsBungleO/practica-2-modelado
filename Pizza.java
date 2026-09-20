@@ -20,7 +20,7 @@ public abstract class Pizza{
     protected String descripcion;
 
     /**Precio de la pizza */
-    protected float precio;
+    protected double precio;
 
     /**Identificador para saber si la pizza es vegetariana */
     protected boolean esVegetariana;
@@ -32,7 +32,7 @@ public abstract class Pizza{
      * @param precio El precio de la pizza
      * @param esVegetariana Indicador para saber si la pizza es vegetariana
      */
-    public Pizza(int id, String nombre, String descripcion, float precio, boolean esVegetariana){
+    public Pizza(int id, String nombre, String descripcion, double precio, boolean esVegetariana){
         
         this.id=id;
         this.nombre=nombre;
@@ -70,7 +70,7 @@ public abstract class Pizza{
      * obtiene el precio de la pizza
      * @return el precio de la pizza
      */
-    public float getPrecio(){
+    public double getPrecio(){
         return precio;
     }
 
