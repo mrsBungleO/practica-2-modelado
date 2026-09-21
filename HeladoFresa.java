@@ -4,7 +4,7 @@
 public class HeladoFresa extends Helado {
 
     public static final String SABOR = "Helado de Fresa";
-    public static final double PRECIO_BASE = 2.0;
+    public static final double PRECIO_BASE = 20.0;
 
     /**
      * Constructor que asigna la descripcion inicial del helado de fresa.

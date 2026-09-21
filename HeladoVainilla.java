@@ -4,7 +4,7 @@
 public class HeladoVainilla extends Helado {
 
     public static final String SABOR = "Helado de Vainilla";
-    public static final double PRECIO_BASE = 3.0;
+    public static final double PRECIO_BASE = 30.0;
 
     /**
      * Constructor que asigna la descripcion inicial del helado de vainilla.
