@@ -1,40 +1,75 @@
+/**
+ * Estado concreto que representa al robot dormido
+ * Es el estado inicial del robot y al que
+ * siempre regresa despues de cancelar o entregar una orden
+ * La unica acción válida en este estado es llamar()
+ */
 public class EstadoDormido implements EstadoRobot{
     
+     /** Referencia al robot al que pertenece este estado */
     private Robot robot;
 
+    /**
+     * Construye el estado dormido
+     * @param robot el robot al que pertenece este estado
+     */
     public EstadoDormido(Robot robot){
-
+        this.robot = robot;
     }
 
+    /**
+     * El cliente llama al robot, se crea una orden nueva 
+     * y el robot toma la orden 
+     */
     @Override
     public void llamar(){
-        //
+        System.out.println("¡Has llamado a el robot Cesarín!, Cesarín ha despertado y está listo para tomar tu orden :) ");
+        robot.setOrdenActual(new Orden());
+        robot.setEstado(robot.getEstadoTomandoOrden());
     }
 
+    /**
+     * No se puede ordenar mientras el robot está dormido, primero hay
+     * que llamarlo.
+     * @param pizza la pizza que se intentó ordenar
+     */
     @Override 
     public void ordenarPizza(Pizza pizza){
-
+        System.out.println("El robot está dormido, por favor llamalo primero");
     }
 
     //falta helado
 
+    /**
+     * No hay ninguna orden que confirmar mientras el robot está dormido
+     */
     @Override 
     public void confirmarOrden(){
-        //
+        System.out.println("El robot está dormido, no hay ninguna orden que confirmar");
     }
 
+    /**
+     * No hay ninguna orden que cancelar mientras el robot está dormido
+     */
     @Override 
     public void cancelarOrden(){
-        //
+        System.out.println("El robot está dormido, no hay orden para cancelar");
     }
 
+
+    /**
+     * No hay nada que preparar mientras el robot está dormido
+     */
     @Override 
     public void prepararOrden(){
-        //
+        System.out.println("El robot está dormido, no hay una orden para preparar");
     }
 
+    /**
+     * No hay nada que entregar mientras el robot está dormido
+     */
     @Override 
     public void entregarOrden(){
-        //
+        System.out.println("El robot está dormido, no hay ninguna orden que entregar");
     }
 }
