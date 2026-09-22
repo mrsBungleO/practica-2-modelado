@@ -46,7 +46,7 @@ public class Robot {
     /**
      * Agrega una pizza a la orden actual
      */
-    public void ordenarPizza(Pizza pizza){
+    public void ordenarPizza(){
         estadoActual.ordenarPizza();
     }
 
@@ -84,6 +84,10 @@ public class Robot {
      */
     public void entregarOrden(){
         estadoActual.entregarOrden();
+    }
+
+    public String mostrarEstado(){
+        return estadoActual.mostrarEstado();
     }
 
     /**

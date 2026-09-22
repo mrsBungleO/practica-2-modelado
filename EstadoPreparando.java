@@ -21,7 +21,7 @@ public class EstadoPreparando implements EstadoRobot{
      */
     @Override
     public void llamar(){
-        System.out.println("El robot está cocinando, por favor espera, no puede atender a otro cliente aún");
+        System.out.println("\nEl robot está cocinando, por favor espera, no puede atender a otro cliente aún.\n");
     }
 
     /**
@@ -29,7 +29,7 @@ public class EstadoPreparando implements EstadoRobot{
      */
     @Override 
     public void ordenarPizza(){
-        System.out.println("La orden ya está en preparación, no se pueden agregar más productos.");
+        System.out.println("\nLa orden ya está en preparación, no se pueden agregar más productos.\n");
     }
 
     /**
@@ -38,7 +38,7 @@ public class EstadoPreparando implements EstadoRobot{
     */
     @Override
     public void ordenarHelado(Helado helado){
-        System.out.println("La orden ya está en preparación, no se pueden agregar más productos.");
+        System.out.println("\nLa orden ya está en preparación, no se pueden agregar más productos.\n");
     }
 
     /**
@@ -46,7 +46,7 @@ public class EstadoPreparando implements EstadoRobot{
      */
     @Override 
     public void confirmarOrden(){
-        System.out.println("La orden ya fue confirmada :D");
+        System.out.println("\nLa orden ya fue confirmada :D\n");
     }
 
     /**
@@ -54,7 +54,7 @@ public class EstadoPreparando implements EstadoRobot{
      */
     @Override 
     public void cancelarOrden(){
-        System.out.println("La orden ya no se puede cancelar, ya se confirmó y se está en preparación");
+        System.out.println("\nLa orden ya no se puede cancelar, ya se confirmó y se está en preparación\n");
     }
 
      /**
@@ -63,14 +63,14 @@ public class EstadoPreparando implements EstadoRobot{
      */
     @Override 
     public void prepararOrden(){
-        System.out.println("\nRobot Cesarín: Iniciando la preparación de tu pedido...");
+        System.out.println("\nRobot Cesarín: Iniciando la preparación de tu pedido...\n");
         if (robot.getOrdenActual().getPizza() != null) {
             robot.getOrdenActual().getPizza().prepararPizza();
         }
         if (robot.getOrdenActual().getHelado() != null) {
-        System.out.println("Preparando: " + robot.getOrdenActual().getHelado().getDescripcion());
+        System.out.println("\nPreparando: " + robot.getOrdenActual().getHelado().getDescripcion());
         }
-        System.out.println("La orden está lista. El robot Cesarín espera a que el cliente la recoja.");
+        System.out.println("\nLa orden está lista. El robot Cesarín espera a que el cliente la recoja.\n");
         robot.setEstado(robot.getEstadoEsperandoEntrega());
     }
 
@@ -79,7 +79,15 @@ public class EstadoPreparando implements EstadoRobot{
      */
     @Override 
     public void entregarOrden(){
-        System.out.println("La orden se está preparadno, aún no se puede entregar");
+        System.out.println("\nLa orden se está preparando, aún no se puede entregar.\n");
+    }
+
+    /**
+     * Muestra el estado del robot
+     */
+    @Override
+    public String mostrarEstado(){
+        return "PREPARANDO LA ORDEN";
     }
     
 }

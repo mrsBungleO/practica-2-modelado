@@ -47,5 +47,10 @@ public interface EstadoRobot {
      * Una vez que la orden ya fue preparada
      */
     void entregarOrden();
+
+    /**
+     * Método que nos muestra el estado en que se encuentra nuestro robot
+     */
+    String mostrarEstado();
 }
 

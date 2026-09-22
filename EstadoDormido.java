@@ -23,7 +23,7 @@ public class EstadoDormido implements EstadoRobot{
      */
     @Override
     public void llamar(){
-        System.out.println("¡Has llamado a el robot Cesarín!, Cesarín ha despertado y está listo para tomar tu orden :) ");
+        System.out.println("\n¡Has llamado a el robot Cesarín!, Cesarín ha despertado y está listo para tomar tu orden :) \n");
         robot.setOrdenActual(new Orden());
         robot.setEstado(robot.getEstadoTomandoOrden());
     }
@@ -34,7 +34,7 @@ public class EstadoDormido implements EstadoRobot{
      */
     @Override 
     public void ordenarPizza(){
-        System.out.println("El robot está dormido, por favor llamalo primero");
+        System.out.println("\nEl robot está dormido, por favor llamalo primero.\n");
     }
 
     /**
@@ -44,7 +44,7 @@ public class EstadoDormido implements EstadoRobot{
     */
     @Override
     public void ordenarHelado(Helado helado){
-        System.out.println("El robot está dormido, por favor llamalo primero");
+        System.out.println("\nEl robot está dormido, por favor llamalo primero.\n");
     }
 
     /**
@@ -52,7 +52,7 @@ public class EstadoDormido implements EstadoRobot{
      */
     @Override 
     public void confirmarOrden(){
-        System.out.println("El robot está dormido, no hay ninguna orden que confirmar");
+        System.out.println("\nEl robot está dormido, no hay ninguna orden que confirmar\n.");
     }
 
     /**
@@ -60,7 +60,7 @@ public class EstadoDormido implements EstadoRobot{
      */
     @Override 
     public void cancelarOrden(){
-        System.out.println("El robot está dormido, no hay orden para cancelar");
+        System.out.println("\nEl robot está dormido, no hay orden para cancelar\n");
     }
 
 
@@ -69,7 +69,7 @@ public class EstadoDormido implements EstadoRobot{
      */
     @Override 
     public void prepararOrden(){
-        System.out.println("El robot está dormido, no hay una orden para preparar");
+        System.out.println("\nEl robot está dormido, no hay una orden para preparar\n");
     }
 
     /**
@@ -77,6 +77,14 @@ public class EstadoDormido implements EstadoRobot{
      */
     @Override 
     public void entregarOrden(){
-        System.out.println("El robot está dormido, no hay ninguna orden que entregar");
+        System.out.println("\nEl robot está dormido, no hay ninguna orden que entregar\n");
+    }
+
+    /**
+     * Muestra el estado del robot
+     */
+    @Override
+    public String mostrarEstado(){
+        return "DORMIDO";
     }
 }

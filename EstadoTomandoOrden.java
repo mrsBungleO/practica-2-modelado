@@ -26,7 +26,7 @@ public class EstadoTomandoOrden implements EstadoRobot{
      */
     @Override
     public void llamar(){
-        System.out.println("El robot ya está tomando una orden, no puede atender a otro cliente todavía");
+        System.out.println("\nEl robot ya está tomando una orden, no puede atender a otro cliente todavía.\n");
     }
 
     /**
@@ -37,7 +37,7 @@ public class EstadoTomandoOrden implements EstadoRobot{
     public void ordenarPizza(){
         Pizza pizza = this.elegirPizza();
         robot.getOrdenActual().agregarPizza(pizza);
-        System.out.println("Se agregó " + pizza.getNombre() + " a la orden.");
+        System.out.println("\nSe agregó " + pizza.getNombre() + " a la orden.\n");
     }
 
     /**
@@ -48,7 +48,7 @@ public class EstadoTomandoOrden implements EstadoRobot{
     @Override
     public void ordenarHelado(Helado helado){
     robot.getOrdenActual().agregarHelado(helado);
-    System.out.println("Se agregó " + helado.getDescripcion() + " a la orden.");
+    System.out.println("\nSe agregó " + helado.getDescripcion() + " a la orden.\n");
     }
 
      /**
@@ -58,10 +58,10 @@ public class EstadoTomandoOrden implements EstadoRobot{
     @Override 
     public void confirmarOrden(){
          if (!robot.getOrdenActual().estaVacia()) {
-            System.out.println("Robot Cesarín: Orden CONFIRMADA, comenzaré a preparar tu orden, ¡A partir de este momento no se puede cancelar!");
+            System.out.println("\nRobot Cesarín: Orden CONFIRMADA, comenzaré a preparar tu orden, ¡A partir de este momento no se puede cancelar!\n");
             robot.setEstado(robot.getEstadoPreparando());
         } else {
-            System.out.println("No se puede confirmar una orden vacía, agrega al menos un producto por favor");
+            System.out.println("\nNo se puede confirmar una orden vacía, agrega al menos un producto por favor.\n");
         }
     }
 
@@ -71,8 +71,8 @@ public class EstadoTomandoOrden implements EstadoRobot{
      */
     @Override 
     public void cancelarOrden(){
-        System.out.println("Robot Cesarín: Orden Cancelada");
-        System.out.println("El robot vuelve a dormir");
+        System.out.println("\nRobot Cesarín: Orden Cancelada\n");
+        System.out.println("\nEl robot vuelve a dormir\n");
         robot.setOrdenActual(null);
         robot.setEstado(robot.getEstadoDormido());
     }
@@ -82,7 +82,7 @@ public class EstadoTomandoOrden implements EstadoRobot{
      */
     @Override 
     public void prepararOrden(){
-         System.out.println("Todavía no se puede preparar la orden, primero hay que confirmarla");
+         System.out.println("\nTodavía no se puede preparar la orden, primero hay que confirmarla.\n");
     }
 
     /**
@@ -90,7 +90,15 @@ public class EstadoTomandoOrden implements EstadoRobot{
      */
     @Override 
     public void entregarOrden(){
-        System.out.println("Todavía no hay nada que entregar, la orden no se ha confirmado");
+        System.out.println("\nTodavía no hay nada que entregar, la orden no se ha confirmado\n");
+    }
+
+    /**
+     * Muestra que el robot esta tomando orden
+     */
+    @Override
+    public String mostrarEstado(){
+        return "TOMANDO ORDEN";
     }
 
     /**
@@ -127,6 +135,7 @@ public class EstadoTomandoOrden implements EstadoRobot{
             System.out.println("$" + pizza.getPrecio());
             System.out.println("-----------------------");
         }
+        System.out.println("");
 
         return listaDePizzas;
 
@@ -142,6 +151,8 @@ public class EstadoTomandoOrden implements EstadoRobot{
         int eleccionPizza=0;
         boolean entradaValida= false;
 
+        System.out.println("\nElige alguna de las opciones de pizza que tenemos para ti:\n");
+
         ArrayList<Pizza> listaDePizzas= this.imprimirPizzas();
 
         while(!entradaValida){
@@ -150,10 +161,10 @@ public class EstadoTomandoOrden implements EstadoRobot{
                 if(eleccionPizza>=1 && eleccionPizza<=6){
                     entradaValida=true;
                 } else {
-                    System.out.println("Opción no disponible. Elige una pizza del menú.");
+                    System.out.println("\nOpción no disponible. Elige una pizza del menú.\n");
                 }
             } catch(InputMismatchException e){
-                System.out.println("Elige una opción válida.");
+                System.out.println("\nElige una opción válida.\n");
                 leerCliente.nextLine();
             }
         }

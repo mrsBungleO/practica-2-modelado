@@ -91,29 +91,29 @@ public abstract class Pizza{
         int tipoMasa=0;
         boolean entradaValida=false;
 
-        System.out.print("----Comenzando la preparación----");
-        System.out.println("¿Qué tipo de masa le gustaría que llevara su pizza?");
+        System.out.println("----Comenzando la preparación----");
+        System.out.println("¿Qué tipo de masa le gustaría que llevara su pizza?\n");
         
         while(!entradaValida){
             try{
-                System.out.println("1. Napolitana \n2.Romana\n3. Americana");
+                System.out.println("1. Napolitana \n2. Romana\n3. Americana\n");
         
                 tipoMasa=leer.nextInt();
 
                 if(tipoMasa>=1 && tipoMasa<=3){
                     entradaValida=true;
                 } else{
-                    System.out.println("Opción no disponible. Elige una de las siguientes opciones:");
+                    System.out.println("\nOpción no disponible. Elige una de las siguientes opciones:\n");
                 }
             }catch(InputMismatchException e){
-                System.out.println("Introduce una opción válida.");
+                System.out.println("\nIntroduce una opción válida.\n");
                 leer.nextLine();
             }
         }
         
        
 
-        System.out.println("Tipo de masa confirmada. En un momento estará lista su pizza.");
+        System.out.println("\nTipo de masa confirmada. En un momento estará lista su pizza.\n");
 
         this.prepararMasa(tipoMasa);
         this.aplanarMasa();

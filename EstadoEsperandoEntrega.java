@@ -23,7 +23,7 @@ public class EstadoEsperandoEntrega implements EstadoRobot {
      */
     @Override
     public void llamar(){
-        System.out.println("EL robot está aún en la entrega de la orden anterior, no puede atender a otro cliente todavía");
+        System.out.println("\nEL robot está aún en la entrega de la orden anterior, no puede atender a otro cliente todavía\n");
     }
 
     /**
@@ -31,7 +31,7 @@ public class EstadoEsperandoEntrega implements EstadoRobot {
      */
     @Override 
     public void ordenarPizza(){
-        System.out.println("La orden ya fue preparada, no puedes agregar más productos");
+        System.out.println("\nLa orden ya fue preparada, no puedes agregar más productos\n");
     }
 
     /**
@@ -40,7 +40,7 @@ public class EstadoEsperandoEntrega implements EstadoRobot {
     */
     @Override
     public void ordenarHelado(Helado helado){
-        System.out.println("La orden ya fue preparada, no puedes agregar más productos");
+        System.out.println("\nLa orden ya fue preparada, no puedes agregar más productos\n");
     }
 
     /**
@@ -48,7 +48,7 @@ public class EstadoEsperandoEntrega implements EstadoRobot {
      */
     @Override 
     public void confirmarOrden(){
-        System.out.println("La orden ya fue confirmada y preparada");
+        System.out.println("\nLa orden ya fue confirmada y preparada\n");
     }
 
     /**
@@ -56,7 +56,7 @@ public class EstadoEsperandoEntrega implements EstadoRobot {
      */
     @Override 
     public void cancelarOrden(){
-        System.out.println("OH NO! La orden ya no se puede cancelar, la comida ya está preparada y lista para entregarse");
+        System.out.println("\nOH NO! La orden ya no se puede cancelar, la comida ya está preparada y lista para entregarse\n");
     }
 
     /**
@@ -64,7 +64,7 @@ public class EstadoEsperandoEntrega implements EstadoRobot {
      */
     @Override 
     public void prepararOrden(){
-        System.out.println("La orden ya fue preparada, solo falta entregarla");
+        System.out.println("\nLa orden ya fue preparada, solo falta entregarla\n");
     }
 
     /**
@@ -73,10 +73,18 @@ public class EstadoEsperandoEntrega implements EstadoRobot {
      */
     @Override 
     public void entregarOrden(){
-        System.out.println("Robot Cesarín: ¡Gracias por tu compra!, aquí tienes tu ticket: ");
+        System.out.println("\nRobot Cesarín: ¡Gracias por tu compra!, aquí tienes tu ticket: \n");
         System.out.println(robot.getOrdenActual().generarTicket());
         robot.setOrdenActual(null);
-        System.out.println("El robot vuelve a dormir.");
+        System.out.println("\nEl robot vuelve a dormir.\n");
         robot.setEstado(robot.getEstadoDormido());
+    }
+
+    /**
+     * Muestra el estado del robot
+     */
+    @Override
+    public String mostrarEstado(){
+        return "ESPERANDO ENTREGA";
     }
 }
