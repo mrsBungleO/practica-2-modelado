@@ -37,7 +37,15 @@ public class EstadoDormido implements EstadoRobot{
         System.out.println("El robot está dormido, por favor llamalo primero");
     }
 
-    //falta helado
+    /**
+    * No se puede ordenar mientras el robot está dormido, primero hay
+    * que llamarlo.
+    * @param helado el helado que se intentó ordenar
+    */
+    @Override
+    public void ordenarHelado(Helado helado){
+        System.out.println("El robot está dormido, por favor llamalo primero");
+    }
 
     /**
      * No hay ninguna orden que confirmar mientras el robot está dormido

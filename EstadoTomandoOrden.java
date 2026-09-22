@@ -40,7 +40,16 @@ public class EstadoTomandoOrden implements EstadoRobot{
         System.out.println("Se agregó " + pizza.getNombre() + " a la orden.");
     }
 
-    //falta helado
+    /**
+    * Agrega el helado indicado a la orden actual,
+     * el robot puede seguir agregando productos
+     * @param helado el helado que el cliente quiere agregar a su orden
+    */
+    @Override
+    public void ordenarHelado(Helado helado){
+    robot.getOrdenActual().agregarHelado(helado);
+    System.out.println("Se agregó " + helado.getDescripcion() + " a la orden.");
+    }
 
      /**
      * Confirma la orden si esta no está vacía y el robot pasa a

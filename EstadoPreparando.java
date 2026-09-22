@@ -32,7 +32,14 @@ public class EstadoPreparando implements EstadoRobot{
         System.out.println("La orden ya está en preparación, no se pueden agregar más productos.");
     }
 
-    //falta helado
+    /**
+    * Ya no se pueden agregar productos a una orden que ya está en preparación
+    * @param helado el helado que se intentó agregar
+    */
+    @Override
+    public void ordenarHelado(Helado helado){
+        System.out.println("La orden ya está en preparación, no se pueden agregar más productos.");
+    }
 
     /**
      * La orden ya fue confirmada, no se puede confirmar de nuevo
@@ -60,7 +67,9 @@ public class EstadoPreparando implements EstadoRobot{
         if (robot.getOrdenActual().getPizza() != null) {
             robot.getOrdenActual().getPizza().prepararPizza();
         }
-        //falta preparar el helado cuando esté listo el patrón Decorator
+        if (robot.getOrdenActual().getHelado() != null) {
+        System.out.println("Preparando: " + robot.getOrdenActual().getHelado().getDescripcion());
+        }
         System.out.println("La orden está lista. El robot Cesarín espera a que el cliente la recoja.");
         robot.setEstado(robot.getEstadoEsperandoEntrega());
     }

@@ -50,7 +50,13 @@ public class Robot {
         estadoActual.ordenarPizza();
     }
 
-    //Falta helado
+    /**
+    * Agrega un helado a la orden actual
+    * @param helado el helado a agregar a la orden
+    */
+    public void ordenarHelado(Helado helado){
+    estadoActual.ordenarHelado(helado);
+    }
     
     /**
      * Confirma la orden actual

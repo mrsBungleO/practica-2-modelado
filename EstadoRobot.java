@@ -16,6 +16,13 @@ public interface EstadoRobot {
      * solo mientras se está tomando la orden
      */
     void ordenarPizza();
+
+    /**
+    * Acción para agregar un helado a la orden actual
+    * solo mientras se está tomando la orden
+    * @param helado el helado que el cliente quiere agregar a su orden
+    */
+    void ordenarHelado(Helado helado);
     
     /**
      * Acción para confirmar la orden actual

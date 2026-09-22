@@ -34,7 +34,14 @@ public class EstadoEsperandoEntrega implements EstadoRobot {
         System.out.println("La orden ya fue preparada, no puedes agregar más productos");
     }
 
-    //falta helado
+    /**
+    * Ya no se pueden agregar productos, pq la orden ya fue preparada
+    * @param helado el helado que se intentó agregar
+    */
+    @Override
+    public void ordenarHelado(Helado helado){
+        System.out.println("La orden ya fue preparada, no puedes agregar más productos");
+    }
 
     /**
      * La orden no se puede confirmar de nuevo
