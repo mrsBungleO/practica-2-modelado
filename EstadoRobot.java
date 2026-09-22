@@ -14,9 +14,8 @@ public interface EstadoRobot {
     /**
      * Acción para agregar una pizza a la orden actual
      * solo mientras se está tomando la orden
-     * @param pizza la pizza que el cliente quiere agregar a su orden
      */
-    void ordenarPizza(Pizza pizza);
+    void ordenarPizza();
     
     /**
      * Acción para confirmar la orden actual

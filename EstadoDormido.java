@@ -31,10 +31,9 @@ public class EstadoDormido implements EstadoRobot{
     /**
      * No se puede ordenar mientras el robot está dormido, primero hay
      * que llamarlo.
-     * @param pizza la pizza que se intentó ordenar
      */
     @Override 
-    public void ordenarPizza(Pizza pizza){
+    public void ordenarPizza(){
         System.out.println("El robot está dormido, por favor llamalo primero");
     }
 

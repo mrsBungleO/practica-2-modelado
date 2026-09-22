@@ -45,10 +45,9 @@ public class Robot {
 
     /**
      * Agrega una pizza a la orden actual
-     * @param pizza la pizza a agregar a la orden
      */
     public void ordenarPizza(Pizza pizza){
-        estadoActual.ordenarPizza(pizza);
+        estadoActual.ordenarPizza();
     }
 
     //Falta helado

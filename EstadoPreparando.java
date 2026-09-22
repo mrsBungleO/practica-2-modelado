@@ -26,10 +26,9 @@ public class EstadoPreparando implements EstadoRobot{
 
     /**
      * Ya no se pueden agregar productos a una orden que ya está en preparación
-     * @param pizza la pizza que se intentó agregar
      */
     @Override 
-    public void ordenarPizza(Pizza pizza){
+    public void ordenarPizza(){
         System.out.println("La orden ya está en preparación, no se pueden agregar más productos.");
     }
 
