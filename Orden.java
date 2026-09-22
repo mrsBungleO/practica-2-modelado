@@ -5,15 +5,18 @@
  */
 public class Orden {
 
-     /** Pizza agregada a la orden, o null si aún no se ha agregado ninguna. */
+    /** Pizza agregada a la orden, o null si aún no se ha agregado ninguna. */
     private Pizza pizza;
-    //Helado
+    /** Helado agregado a la orden, o null si aún no se ha agregado ninguno. */
+    private Helado helado;
+    
 
     /**
      * Construye una orden vacía, sin ningún producto todavía
      */
     public Orden(){
         this.pizza = null;
+        this.helado = null;
     }
 
     /**
@@ -26,7 +29,15 @@ public class Orden {
         this.pizza = pizza;
     }
 
-    //Helado
+    /**
+    * Agrega un helado a la orden. Como el cliente solo puede pedir
+    * un helado por orden, si ya había uno agregado, este se
+    * reemplaza por el nuevo
+    * @param helado el helado que se agrega a la orden
+    */
+    public void agregarHelado(Helado helado){
+    this.helado = helado;
+    }
 
     /**
      * Indica si la orden no tiene ningún producto agregado todavía
@@ -34,7 +45,7 @@ public class Orden {
      * @return true si no se ha agregado ni pizza ni helado, false en caso contrario
      */
     public boolean estaVacia(){
-        return pizza == null; //falta incluir al helado en esta condición
+    return pizza == null && helado == null;
     }
 
     /**
@@ -49,7 +60,9 @@ public class Orden {
         if (pizza != null) {
             ticket.append(pizza.getNombre()).append(" - $").append(pizza.getPrecio()).append("\n");
         }
-        //falta agregar el sabor del helado y sus ingredientes al ticket
+        if (helado != null) {
+        ticket.append(helado.getDescripcion()).append(" - $").append(helado.getPrecio()).append("\n");
+        }
         ticket.append("Total: $").append(calcularTotal());
         return ticket.toString();
     }
@@ -64,7 +77,9 @@ public class Orden {
         if (pizza != null) {
             total += pizza.getPrecio();
         }
-        //falta sumar el costo del helado y sus ingredientes extra
+        if (helado != null) {
+        total += helado.getPrecio();
+        }
         return total;
     }
 
@@ -76,6 +91,12 @@ public class Orden {
         return pizza;
     }
 
-    //Helado
+    /**
+    * Obtiene el helado de la orden
+    * @return el helado agregado a la orden, o null si no se ha agregado
+    */
+    public Helado getHelado() {
+        return helado;
+    }
     
 }
