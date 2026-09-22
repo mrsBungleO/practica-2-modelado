@@ -15,7 +15,7 @@ public class PizzaDeMariscos extends Pizza{
      */
     @Override
     public void colocarQuesoConHook(){
-        System.out.println("El robot Cesarín agrega queso manchego rayado a la masa.");
+        System.out.println("El robot Alexin agrega queso manchego rayado a la masa.");
     }
 
     /**
@@ -23,6 +23,6 @@ public class PizzaDeMariscos extends Pizza{
      */
     @Override
     public void colocarProteina(){
-        System.out.println("El robot Cesarín agrega algunos camarones y un poco de pulpo en trozos a la masa de manera uniforme.");
+        System.out.println("El robot Alexin agrega algunos camarones y un poco de pulpo en trozos a la masa de manera uniforme.");
     }
 }

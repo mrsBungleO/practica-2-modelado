@@ -134,11 +134,11 @@ public abstract class Pizza{
      */
     public void prepararMasa(int tipoMasa){
         if(tipoMasa==1){
-            System.out.println("El robot Cesarín prepara una masa napolitana.");
+            System.out.println("El robot Alexin prepara una masa napolitana.");
         } else if(tipoMasa==2){
-            System.out.println("El robot Cesarín prepara una masa romana.");
+            System.out.println("El robot Alexin prepara una masa romana.");
         }else if(tipoMasa==3){
-            System.out.println("El robot Cesarín prepara una masa americana.");
+            System.out.println("El robot Alexin prepara una masa americana.");
         }
     }
 
@@ -146,28 +146,28 @@ public abstract class Pizza{
      * método que explica como nuestro robot aplana la masa.
      */
     public void aplanarMasa(){
-        System.out.println("El robot Cesarín aplana la masa con su rodillo.");
+        System.out.println("El robot Alexin aplana la masa con su rodillo.");
     }
 
     /**
      * método que explica como nuestro robot aplica la salsa de tomate en la masa
      */
     public void colocarSalsaDeTomate(){
-        System.out.println("El robot Cesarín agrega la salsa de tomate a la masa y la esparce con su cucharón.");
+        System.out.println("El robot Alexin agrega la salsa de tomate a la masa y la esparce con su cucharón.");
     }
 
     /**
      * método hook que hace que nuestra opción por default de queso sea el queso mozzarella.
      */
     public void colocarQuesoConHook(){
-        System.out.println("El robot Cesarín agrega queso mozzarella a la masa");
+        System.out.println("El robot Alexin agrega queso mozzarella a la masa");
     }
 
     /**
      * método que explica como nuestro robot pone las especias en la masa.
      */
     public void colocarEspecias(){
-        System.out.println("El robot cesarín espolvorea orégano, albahaca y tomillo a la masa.");
+        System.out.println("El robot Alexin espolvorea orégano, albahaca y tomillo a la masa.");
     }
 
     /**
@@ -179,31 +179,27 @@ public abstract class Pizza{
      * método que explica como nuestro robot hornea la pizza.
      */
     public void hornear(){
-        System.out.println("El robot Cesarín lleva la pizza al horno para que se cocine.");
+        System.out.println("El robot Alexin lleva la pizza al horno para que se cocine.");
     }
 
     /**
      * método que explica como nuestro robot espera a que se termine de hornear la pizza.
      */
     public void esperar(){
-        System.out.println("El robot Cesarín espera pacientemente a que este lista la pizza.");
+        System.out.println("El robot Alexin espera pacientemente a que este lista la pizza.");
     }
 
     /**
      * método que explica como nuestro robot saca del horno la pizza.
      */
     public void sacarDelHorno(){
-        System.out.println("El robot Cesarín saca del horno con una pala especial la pizza del horno y la coloca en una charola.");
+        System.out.println("El robot Alexin saca del horno con una pala especial la pizza del horno y la coloca en una charola.");
     }
 
     /**
      * método que explica como nuestro robot empaqueta la pizza.
      */
     public void empaquetar(){
-        System.out.println("El robot Cesarín pasa la pizza a una caja, la cierra y agrega chile quebrado y sobres de ketchup a la orden.");
+        System.out.println("El robot Alexin pasa la pizza a una caja, la cierra y agrega chile quebrado y sobres de ketchup a la orden.");
     }
-
-
-
-
 }

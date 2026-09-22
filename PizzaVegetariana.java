@@ -15,6 +15,6 @@ public class PizzaVegetariana extends Pizza{
      */
     @Override
     public void colocarProteina(){
-        System.out.println("El robot Cesarín agrega la ensalada de champiñones, berenjena en rodajas y cebolla morada en rodajas a la masa de manera uniforme.");
+        System.out.println("El robot Alexin agrega la ensalada de champiñones, berenjena en rodajas y cebolla morada en rodajas a la masa de manera uniforme.");
     }
 }

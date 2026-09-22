@@ -15,7 +15,7 @@ public class PizzaAlPastor extends Pizza{
      */
     @Override
     public void colocarQuesoConHook(){
-        System.out.println("El robot Cesarín agrega queso gouda rayado a la masa.");
+        System.out.println("El robot Alexin agrega queso gouda rayado a la masa.");
     }
 
     /**
@@ -23,6 +23,6 @@ public class PizzaAlPastor extends Pizza{
      */
     @Override
     public void colocarProteina(){
-        System.out.println("El robot Cesarín agrega la carne al pastor con trozos de piña y cebolla y cilantro picados de manera uniforme a la masa.");
+        System.out.println("El robot Alexin agrega la carne al pastor con trozos de piña y cebolla y cilantro picados de manera uniforme a la masa.");
     }
 }

@@ -15,6 +15,6 @@ public class PizzaRanchera extends Pizza{
      */
     @Override
     public void colocarProteina(){
-        System.out.println("El robot Cesarín agrega la capa de frijoles, los trozos de chorizo frito y las rebanadas de aguacate a la masa de manera uniforme. ");
+        System.out.println("El robot Alexin agrega la capa de frijoles, los trozos de chorizo frito y las rebanadas de aguacate a la masa de manera uniforme. ");
     }
 }

@@ -15,6 +15,6 @@ public class PizzaHawaiiana extends Pizza{
      */
     @Override
     public void colocarProteina(){
-        System.out.println("El robot Cesarin agrega los cubitos de jamón y de piña a la masa de manera uniforme.");
+        System.out.println("El robot Alexin agrega los cubitos de jamón y de piña a la masa de manera uniforme.");
     }
 }
