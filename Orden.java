@@ -5,14 +5,14 @@
  */
 public class Orden {
 
-    /** Pizza agregada a la orden, o null si aún no se ha agregado ninguna. */
+    /** Pizza agregada a la orden, o null si aun no se ha agregado ninguna. */
     private Pizza pizza;
-    /** Helado agregado a la orden, o null si aún no se ha agregado ninguno. */
+    /** Helado agregado a la orden, o null si aun no se ha agregado ninguno. */
     private Helado helado;
     
 
     /**
-     * Construye una orden vacía, sin ningún producto todavía
+     * Construye una orden vacia, sin ningun producto todavia
      */
     public Orden(){
         this.pizza = null;
@@ -31,7 +31,7 @@ public class Orden {
 
     /**
     * Agrega un helado a la orden. Como el cliente solo puede pedir
-    * un helado por orden, si ya había uno agregado, este se
+    * un helado por orden, si ya habia uno agregado, este se
     * reemplaza por el nuevo
     * @param helado el helado que se agrega a la orden
     */
@@ -40,12 +40,30 @@ public class Orden {
     }
 
     /**
-     * Indica si la orden no tiene ningún producto agregado todavía
-     * Se usa para no permitir confirmar una orden vacía
+     * Indica si la orden no tiene ningun producto agregado todavia
+     * Se usa para no permitir confirmar una orden vacia
      * @return true si no se ha agregado ni pizza ni helado, false en caso contrario
      */
     public boolean estaVacia(){
     return pizza == null && helado == null;
+    }
+
+    /**
+     * Indica si la orden ya tiene una pizza agregada
+     * Se usa para no permitir que el cliente pida mas de una pizza
+     * @return true si ya hay una pizza en la orden, false en caso contrario
+     */
+    public boolean tienePizza(){
+        return pizza != null;
+    }
+
+    /**
+     * Indica si la orden ya tiene un helado agregado.
+     * Se usa para no permitir que el cliente pida mas de un heladop
+     * @return true si ya hay un helado en la orden, false en caso contrario
+     */
+    public boolean tieneHelado(){
+        return helado != null;
     }
 
     /**

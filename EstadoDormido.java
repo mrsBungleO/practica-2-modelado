@@ -2,7 +2,7 @@
  * Estado concreto que representa al robot dormido
  * Es el estado inicial del robot y al que
  * siempre regresa despues de cancelar o entregar una orden
- * La unica acción válida en este estado es llamar()
+ * La unica accion valida en este estado es llamar()
  */
 public class EstadoDormido implements EstadoRobot{
     
@@ -23,44 +23,44 @@ public class EstadoDormido implements EstadoRobot{
      */
     @Override
     public void llamar(){
-        System.out.println("\n¡Has llamado a el robot Cesarín!, Cesarín ha despertado y está listo para tomar tu orden :) \n");
+        System.out.println("\n¡Has llamado a el robot Alexin!, ALexin ha despertado y esta listo para tomar tu orden :) \n");
         robot.setOrdenActual(new Orden());
         robot.setEstado(robot.getEstadoTomandoOrden());
     }
 
     /**
-     * No se puede ordenar mientras el robot está dormido, primero hay
+     * No se puede ordenar mientras el robot esta dormido, primero hay
      * que llamarlo.
      */
     @Override 
     public void ordenarPizza(){
-        System.out.println("\nEl robot está dormido, por favor llamalo primero.\n");
+        System.out.println("\nEl robot esta dormido, por favor llamalo primero.\n");
     }
 
     /**
-    * No se puede ordenar mientras el robot está dormido, primero hay
+    * No se puede ordenar mientras el robot esta dormido, primero hay
     * que llamarlo.
     * @param helado el helado que se intentó ordenar
     */
     @Override
-    public void ordenarHelado(Helado helado){
-        System.out.println("\nEl robot está dormido, por favor llamalo primero.\n");
+    public void ordenarHelado(){
+        System.out.println("\nEl robot esta dormido, por favor llamalo primero.\n");
     }
 
     /**
-     * No hay ninguna orden que confirmar mientras el robot está dormido
+     * No hay ninguna orden que confirmar mientras el robot esta dormido
      */
     @Override 
     public void confirmarOrden(){
-        System.out.println("\nEl robot está dormido, no hay ninguna orden que confirmar\n.");
+        System.out.println("\nEl robot esta dormido, no hay ninguna orden que confirmar\n.");
     }
 
     /**
-     * No hay ninguna orden que cancelar mientras el robot está dormido
+     * No hay ninguna orden que cancelar mientras el robot esta dormido
      */
     @Override 
     public void cancelarOrden(){
-        System.out.println("\nEl robot está dormido, no hay orden para cancelar\n");
+        System.out.println("\nEl robot esta dormido, no hay orden para cancelar\n");
     }
 
 
@@ -69,15 +69,15 @@ public class EstadoDormido implements EstadoRobot{
      */
     @Override 
     public void prepararOrden(){
-        System.out.println("\nEl robot está dormido, no hay una orden para preparar\n");
+        System.out.println("\nEl robot esta dormido, no hay una orden para preparar\n");
     }
 
     /**
-     * No hay nada que entregar mientras el robot está dormido
+     * No hay nada que entregar mientras el robot esta dormido
      */
     @Override 
     public void entregarOrden(){
-        System.out.println("\nEl robot está dormido, no hay ninguna orden que entregar\n");
+        System.out.println("\nEl robot esta dormido, no hay ninguna orden que entregar\n");
     }
 
     /**

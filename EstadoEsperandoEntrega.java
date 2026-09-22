@@ -1,7 +1,7 @@
 /**
  * Estado concreto que representa al robot esperando a que el cliente
  * solicite la entrega de su orden ya preparada 
- * La única acción válida en este estado es entregarOrden(), tras la cual el robot vuelve a
+ * La unica acción valida en este estado es entregarOrden(), tras la cual el robot vuelve a
  * dormir, listo para atender a otro cliente
  */
 public class EstadoEsperandoEntrega implements EstadoRobot {
@@ -18,12 +18,12 @@ public class EstadoEsperandoEntrega implements EstadoRobot {
     }
 
     /**
-     * El robot todavía tiene una entrega pendiente, no puede atender a
+     * El robot todavia tiene una entrega pendiente, no puede atender a
      * otro cliente hasta terminar con esta
      */
     @Override
     public void llamar(){
-        System.out.println("\nEL robot está aún en la entrega de la orden anterior, no puede atender a otro cliente todavía\n");
+        System.out.println("\nEL robot está aun en la entrega de la orden anterior, no puede atender a otro cliente todavia\n");
     }
 
     /**
@@ -31,15 +31,15 @@ public class EstadoEsperandoEntrega implements EstadoRobot {
      */
     @Override 
     public void ordenarPizza(){
-        System.out.println("\nLa orden ya fue preparada, no puedes agregar más productos\n");
+        System.out.println("\nLa orden ya fue preparada, no puedes agregar mas productos\n");
     }
 
     /**
     * Ya no se pueden agregar productos, pq la orden ya fue preparada
-    * @param helado el helado que se intentó agregar
+    * @param helado el helado que se intento agregar
     */
     @Override
-    public void ordenarHelado(Helado helado){
+    public void ordenarHelado(){
         System.out.println("\nLa orden ya fue preparada, no puedes agregar más productos\n");
     }
 

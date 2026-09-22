@@ -1,26 +1,26 @@
 /**
  * Representa al robot de la pizzeria
  * El robot mantiene una referencia al estadp en el que se encuentra actualmente 
- * y delega en ese estado toda la lógica de qué hacer con cada acción del menú
+ * y delega en ese estado toda la logica de que hacer con cada accion del menu
  */
 public class Robot {
 
     /** Estado en el que se encuentra actualmente el robot */
     private EstadoRobot estadoActual;
 
-    /** Instancia única del estado "dormido" */
+    /** Instancia unica del estado "dormido" */
     private EstadoRobot estadoDormido;
 
-    /** Instancia única del estado "tomando la orden"*/
+    /** Instancia unica del estado "tomando la orden"*/
     private EstadoRobot estadoTomandoOrden;
 
-    /** Instancia única del estado "preparando la orden" */
+    /** Instancia unica del estado "preparando la orden" */
     private EstadoRobot estadoPreparando;
 
     /** Instancia del estadp "esperando entrega" */
     private EstadoRobot estadoEsperandoEntrega;
 
-    /** Orden que el robot está tomando, preparando o a punto de entregar*/
+    /** Orden que el robot esta tomando, preparando o a punto de entregar*/
     private Orden ordenActual;
     
     /**
@@ -52,10 +52,9 @@ public class Robot {
 
     /**
     * Agrega un helado a la orden actual
-    * @param helado el helado a agregar a la orden
     */
-    public void ordenarHelado(Helado helado){
-    estadoActual.ordenarHelado(helado);
+    public void ordenarHelado(){
+    estadoActual.ordenarHelado();
     }
     
     /**
@@ -86,13 +85,17 @@ public class Robot {
         estadoActual.entregarOrden();
     }
 
+    /**
+    * Muestra el estado en el que se encuentra actualmente el robot
+    * @return el nombre del estado actual
+    */
     public String mostrarEstado(){
         return estadoActual.mostrarEstado();
     }
 
     /**
      * Cambia el estado actual del robot
-     * Este método lo invocan las propias clases de estado cuando una transición debe ocurrir
+     * Este metodo lo invocan las propias clases de estado cuando una transicion debe ocurrir
      * @param estado el nuevo estado del robot
      */
     public void setEstado(EstadoRobot estado){

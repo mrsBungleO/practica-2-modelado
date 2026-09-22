@@ -10,23 +10,19 @@ public class SistemaCliente{
      * de validar que lo que el usuario le mande a hacer este dentro de las opciones. 
      */
     public void accionRobot(){
-        /**
-         * QUITEN ESTO DEL HELADO DE FRESA. ALEXIS HAS LO DEL ORDENAR HELADO QUE NO PIDA PARAMETROS
-         */
-        HeladoFresa helado= new HeladoFresa();
         Scanner sc= new Scanner(System.in);
         int opcion=0;
 
         Robot robot= new Robot();
         System.out.println("\n----------EL PEQUEÑO CESARÍN----------\n");
         System.out.println("¡Bienvenido a \"El Pequeño Cesarín\"!");
-        System.out.println("Nuestro robot (insertarNombre) te atendera.");
+        System.out.println("Nuestro robot Alexin te atendera.");
 
         do{
-            System.out.println("El robot (insertarNombre) se encuentra: " + robot.mostrarEstado() + ".");
+            System.out.println("El robot (Alexin se encuentra: " + robot.mostrarEstado() + ").");
             //agregar cuantas pizzas y cuantos helados le pidieron al robot
 
-            System.out.println("Indica que acción quieres que realice (insertarNombre):\n" + 
+            System.out.println("Indica que accion quieres que realice Alexin:\n" + 
                     "\n1.- Llamar al robot.\n" + 
                     "2.- Ordenar una pizza.\n" +
                     "3.- Ordenar un helado.\n" + 
@@ -42,10 +38,10 @@ public class SistemaCliente{
                             break;
                         } catch(InputMismatchException e){
 
-                            System.out.println("\nError. Debes ingresar un número entero.\n");
+                            System.out.println("\nError. Debes ingresar un numero entero.\n");
                             sc.nextLine();
                             
-                            System.out.println("Ingresa una opción válida:");
+                            System.out.println("Ingresa una opcion valida:");
                             System.out.println("1.- Llamar al robot.\n" + 
                                 "2.- Ordenar una pizza.\n" +
                                 "3.- Ordenar un helado.\n" + 
@@ -68,7 +64,7 @@ public class SistemaCliente{
                             break;
 
                         case 3: 
-                            robot.ordenarHelado(helado);
+                            robot.ordenarHelado();
                             break;
 
                         case 4: 
@@ -92,7 +88,7 @@ public class SistemaCliente{
                             break;
                        
                         default:
-                            System.out.println("\nEsta opción no está disponible. Ingresa una de las siguientes opciones:\n");
+                            System.out.println("\nEsta opcion no está disponible. Ingresa una de las siguientes opciones:\n");
                             break;
 
                     }

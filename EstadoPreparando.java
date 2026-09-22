@@ -17,28 +17,29 @@ public class EstadoPreparando implements EstadoRobot{
     }
 
     /**
-     * El robot está ocupado preparando una orden, no puede atender a otro cliente
+     * El robot esta ocupado preparando una orden, no puede atender a otro cliente
      */
     @Override
     public void llamar(){
-        System.out.println("\nEl robot está cocinando, por favor espera, no puede atender a otro cliente aún.\n");
+        System.out.println("El robot esta cocinando, por favor espera, no puede atender a otro cliente aun");
     }
 
     /**
-     * Ya no se pueden agregar productos a una orden que ya está en preparación
+     * Ya no se pueden agregar productos a una orden que ya esta en preparacion
+     * @param pizza la pizza que se intentó agregar
      */
     @Override 
     public void ordenarPizza(){
-        System.out.println("\nLa orden ya está en preparación, no se pueden agregar más productos.\n");
+        System.out.println("La orden ya esta en preparacion, no se pueden agregar mas productos.");
     }
 
     /**
-    * Ya no se pueden agregar productos a una orden que ya está en preparación
+    * Ya no se pueden agregar productos a una orden que ya esta en preparacion
     * @param helado el helado que se intentó agregar
     */
     @Override
-    public void ordenarHelado(Helado helado){
-        System.out.println("\nLa orden ya está en preparación, no se pueden agregar más productos.\n");
+    public void ordenarHelado(){
+        System.out.println("La orden ya esta en preparacion, no se pueden agregar mas productos.");
     }
 
     /**
@@ -46,42 +47,42 @@ public class EstadoPreparando implements EstadoRobot{
      */
     @Override 
     public void confirmarOrden(){
-        System.out.println("\nLa orden ya fue confirmada :D\n");
+        System.out.println("La orden ya fue confirmada :D");
     }
 
     /**
-     * Ya no se puede cancelar una orden que está en preparación
+     * Ya no se puede cancelar una orden que esta en preparacion
      */
     @Override 
     public void cancelarOrden(){
-        System.out.println("\nLa orden ya no se puede cancelar, ya se confirmó y se está en preparación\n");
+        System.out.println("La orden ya no se puede cancelar, ya se confirmo y se esta en preparacion");
     }
 
      /**
-     * Prepara la pizza de la orden actual siguiendo su receta
+     * Prepara la pizza y helado de la orden actual siguiendo su receta
      * y al terminar, el robot pasa a esperar que el cliente recoja su orden.
      */
     @Override 
     public void prepararOrden(){
-        System.out.println("\nRobot Cesarín: Iniciando la preparación de tu pedido...\n");
+        System.out.println("\nRobot Alexin: Iniciando la preparacion de tu pedido...");
         if (robot.getOrdenActual().getPizza() != null) {
             robot.getOrdenActual().getPizza().prepararPizza();
         }
         if (robot.getOrdenActual().getHelado() != null) {
         System.out.println("\nPreparando: " + robot.getOrdenActual().getHelado().getDescripcion());
         }
-        System.out.println("\nLa orden está lista. El robot Cesarín espera a que el cliente la recoja.\n");
+        System.out.println("La orden esta lista. El robot Alexin espera a que el cliente la recoja.");
         robot.setEstado(robot.getEstadoEsperandoEntrega());
     }
 
     /**
-     * Aún no se puede entregar una orden que sigue en preparación
+     * Aun no se puede entregar una orden que sigue en preparacion
      */
     @Override 
     public void entregarOrden(){
-        System.out.println("\nLa orden se está preparando, aún no se puede entregar.\n");
+        System.out.println("La orden se esta preparando, aun no se puede entregar");
     }
-
+    
     /**
      * Muestra el estado del robot
      */
@@ -89,5 +90,4 @@ public class EstadoPreparando implements EstadoRobot{
     public String mostrarEstado(){
         return "PREPARANDO LA ORDEN";
     }
-    
 }

@@ -1,6 +1,6 @@
 /**
  * Clase Main que simplemente aplica un metodo de la clase SistemaCliente dentro del
- * método main.
+ * metodo main.
  */
 public class Main{
     /**
